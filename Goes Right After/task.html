@@ -1,0 +1,60 @@
+<h2>Goes Right After</h2>
+<!-- Describe task in general -->
+<p>
+ In a given word you need to check if one symbol goes only right after another.
+</p>
+<p>
+ Cases you should expect while solving this challenge:
+</p>
+<ul>
+ <li>
+  If more than one symbol is in the list you should always count the first one
+ </li>
+ <li>
+  one of the symbols are not in the given word - your function should return False;
+ </li>
+ <li>
+  any symbol appears in a word more than once - use only the first one;
+ </li>
+ <li>
+  two symbols are the same - your function should return False;
+ </li>
+ <li>
+  the condition is case sensitive, which means 'a' and 'A' are two different symbols.
+ </li>
+</ul>
+<!-- Explain input and output values -->
+<p>
+ <strong>
+  Input:
+ </strong>
+ Three arguments. The first one is a given string, second is a symbol that should go first, and the third is a symbold that should go after the first one.
+</p>
+<p>
+ <strong>
+  Output:
+ </strong>
+ A bool.
+</p>
+<!-- Give some usage examples -->
+<div class="for_info_only">
+ <p>
+  <strong>
+   Example:
+  </strong>
+ </p>
+ 
+ <pre class="brush: python">goes_after('world', 'w', 'o') == True
+goes_after('world', 'w', 'r') == False
+goes_after('world', 'l', 'o') == False
+goes_after('panorama', 'a', 'n') == True
+goes_after('list', 'l', 'o') == False
+goes_after('', 'l', 'o') == False
+goes_after('list', 'l', 'l') == False
+goes_after('world', 'd', 'w') == False
+</pre>
+ 
+</div>
+
+<p><a href="https://py.checkio.org/mission/goes-after/publications/category/clear">View solutions</a></p>
+<p><a href="https://py.checkio.org/en/mission/goes-after">See the task on CheckiO</a></p>

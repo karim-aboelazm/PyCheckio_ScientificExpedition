@@ -1,0 +1,48 @@
+<h2>Remove Accents</h2>
+<p>
+ Assuming you are developing a user based system like facebook, you will want to provide the functionality to search for other members regardless of the presence of accents in a username. Without using a 3rd party collation library, you will need to remove the accents from the username before the comparison.
+</p>
+<p>
+ é - letter with an accent; e - letter without an accent; ̀ and ́ - the stand alone accents;
+</p>
+<p style="text-align: center;">
+ <img alt="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/a2c4713e70944b679aa4eb9ccdc2e3dc/remove_accents.png" style="max-height: 50px" title="Accents"/>
+</p>
+<p>
+ <strong>
+  Input:
+ </strong>
+ A phrase as a string (unicode).
+</p>
+<p>
+ <strong>
+  Output:
+ </strong>
+ An accent free Unicode string.
+</p>
+<div class="for_info_only">
+ <p>
+  <strong>
+   Example:
+  </strong>
+ </p>
+ <pre class="brush: python">
+checkio(u"préfèrent") == u"preferent"
+checkio(u"loài trăn lớn") == u"loai tran lon"
+    </pre>
+</div>
+<p>
+ <strong>
+  How it is used:
+ </strong>
+ It might be a part of a username verification process or a system that proposes the username based on the first and last name of a user.
+</p>
+<p>
+ <strong>
+  Precondition:
+ </strong>
+ 0≤|input|≤40
+</p>
+
+<p><a href="https://py.checkio.org/mission/remove-accents/publications/category/clear">View solutions</a></p>
+<p><a href="https://py.checkio.org/en/mission/remove-accents">See the task on CheckiO</a></p>

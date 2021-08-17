@@ -1,0 +1,103 @@
+<h2>YAML. More Types</h2>
+<!-- Describe task in general -->
+<p>
+ This is the second task on parsing YAML. It represents the next step where parsing gets more complicated. The data types, such as null and bool, are being added, and besides that, you’re getting the ability to use quotes in strings.
+</p>
+<p>
+ Here are some of the examples:
+</p>
+<pre>
+name: "Bob Dylan"
+children: 6
+</pre>
+<pre>
+{
+  "name": "Bob Dylan", 
+  "children": 6
+}
+</pre>
+<p>
+ As you can see, the string can be put in quotes. It can be both double and single quotes.
+</p>
+<pre>
+name: "Bob Dylan"
+children: 6
+alive: false
+</pre>
+<pre>
+{
+  "name": "Bob Dylan", 
+  "alive": False, 
+  "children": 6
+}
+</pre>
+<p>
+ true and false are the keywords defining the boolean type.
+</p>
+<pre>
+name: "Bob Dylan"
+children: 6
+coding:
+</pre>
+<pre>
+{
+  "coding": None, 
+  "name": "Bob Dylan", 
+  "children": 6
+}
+</pre>
+<p>
+ If no value is specified, it becomes undefined. There also is a keyword for this - null.
+</p>
+<!-- Explain input and output values -->
+<p>
+ <strong>
+  Input:
+ </strong>
+ A format string.
+</p>
+<p>
+ <strong>
+  Output:
+ </strong>
+ An object.
+</p>
+<!-- Give some usage examples -->
+<div class="for_info_only">
+ <p>
+  <strong>
+   Example:
+  </strong>
+ </p>
+ 
+ <pre class="brush: python">yaml('name: Alex
+age: 12') == {'age': 12, 'name': 'Alex'}
+yaml('name: Alex Fox
+'
+ 'age: 12
+'
+ '
+'
+ 'class: 12b') == {'age': 12,
+ 'class': '12b',
+ 'name': 'Alex Fox'}
+</pre>
+ 
+</div>
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+ <strong>
+  Precondition:
+ </strong>
+ <i>
+  YAML 1.2 is being used with
+  <a href="https://yaml.org/spec/1.2/spec.html#id2803231">
+   JSON Schema
+  </a>
+  .
+ </i>
+</p>
+
+<p><a href="https://py.checkio.org/mission/yaml-more-types/publications/category/clear">View solutions</a></p>
+<p><a href="https://py.checkio.org/en/mission/yaml-more-types">See the task on CheckiO</a></p>

@@ -1,0 +1,66 @@
+<h2>Time Converter (24h to 12h)</h2>
+<!-- Describe task in general -->
+<p>
+ You prefer a good old 12-hour time format. But the modern world we live in would rather use the 24-hour format and you see it everywhere. Your task is to convert the time from the 24-h format into 12-h format by following the next rules:
+ <br/>
+ - the output format should be 'hh:mm a.m.' (for hours before midday) or 'hh:mm p.m.' (for hours after midday)
+ <br/>
+ - if hours is less than 10 - don't write a '0' before it. For example: '9:05 a.m.'
+ <br/>
+ Here you can find some useful information about the
+ <a href="https://en.wikipedia.org/wiki/12-hour_clock">
+  12-hour format
+ </a>
+ .
+</p>
+<p style="text-align: center;">
+ <img alt="example" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/d755e36637094c5384367b15852d9143/time.png" style="max-height: 220px" title="Time"/>
+</p>
+<!-- Explain input and output values -->
+<p>
+ <strong>
+  Input:
+ </strong>
+ Time in a 24-hour format (as a string).
+</p>
+<p>
+ <strong>
+  Output:
+ </strong>
+ Time in a 12-hour format (as a string).
+</p>
+<!-- Put some usage examples -->
+<div class="for_info_only">
+ <p>
+  <strong>
+   Example:
+  </strong>
+ </p>
+ 
+ <pre class="brush: python">time_converter('12:30') == '12:30 p.m.'
+time_converter('09:00') == '9:00 a.m.'
+time_converter('23:15') == '11:15 p.m.'
+</pre>
+ 
+</div>
+<!-- Here you can explain how it can be used in development and what is usage of this. -->
+<!-- The section is optional -->
+<p class="for_info_only">
+ <strong>
+  How it is used:
+ </strong>
+ For work with the different time formats.
+</p>
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+ <strong>
+  Precondition
+ </strong>
+ :
+ <br/>
+ '00:00' &lt;= time &lt;= '23:59'
+</p>
+
+<p><a href="https://py.checkio.org/mission/time-converter-24h-to-12h/publications/category/clear">View solutions</a></p>
+<p><a href="https://py.checkio.org/en/mission/time-converter-24h-to-12h">See the task on CheckiO</a></p>

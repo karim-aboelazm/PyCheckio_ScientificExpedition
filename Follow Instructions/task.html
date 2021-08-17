@@ -1,0 +1,74 @@
+<h2>Follow Instructions</h2>
+<!-- Describe task in general -->
+<p>
+ <i>
+  You’ve received a letter from a friend whom you haven't seen or heard from for a while. In this letter he gives you instructions on how to find a hidden treasure.
+ </i>
+</p>
+<p>
+ In this mission you should follow a given list of instructions which will get you to a certain point on the map. A list of instructions is a string, each letter of this string points you in the direction of your next step.
+</p>
+<p>
+ The letter "f" - tells you to move forward, "b" - backward, "l" - left, and "r" - right.
+</p>
+<p>
+ It means that if the list of your instructions is "fflff" then you should move forward two times, make one step to the left and then again move two times forward.
+</p>
+<p>
+ Now, let's imagine that you are in the position (0,0). If you move forward your position will change to (0, 1). If you move again it will be (0, 2). If your next step is to the left then your position will become (-1, 2). After the next two steps forward your coordinates will be (-1, 4)
+</p>
+<p>
+ Your goal is to find your final coordinates. Like in our case they are (-1, 4)
+</p>
+<!-- Explain input and output values -->
+<p>
+ <strong>
+  Input:
+ </strong>
+ A string.
+</p>
+<p>
+ <strong>
+  Output:
+ </strong>
+ 
+    A tuple (or list) of two ints
+    
+</p>
+<!-- Put some usage examples -->
+<div class="for_info_only">
+ <p>
+  <strong>
+   Example:
+  </strong>
+ </p>
+ 
+ <pre class="brush: python">follow("fflff") == (-1, 4)
+follow("ffrff") == (1, 4)
+follow("fblr") == (0, 0)
+</pre>
+ 
+</div>
+<!-- Here you can explain how it can be used in development and what is usage of this. -->
+<!-- The section is optional -->
+<p class="for_info_only">
+ <strong>
+  How it is used:
+ </strong>
+ <i>
+  In games with a map
+ </i>
+</p>
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+ <strong>
+  Precondition:
+ </strong>
+ <i>
+  only chars f,b,l and r are allowed
+ </i>
+</p>
+
+<p><a href="https://py.checkio.org/mission/follow-instructions/publications/category/clear">View solutions</a></p>
+<p><a href="https://py.checkio.org/en/mission/follow-instructions">See the task on CheckiO</a></p>

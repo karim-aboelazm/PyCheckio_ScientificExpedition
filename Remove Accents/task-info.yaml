@@ -1,0 +1,19 @@
+type: checkiO
+files:
+- name: mission.py
+  visible: true
+  text: "from unicodedata import normalize, category\ndef checkio(in_string):\n  \
+    \  \"remove accents\"\n    \n    return ''.join(c for c in normalize('NFD', in_string)\
+    \ if category(c) != 'Mn')\n\n    #These \"asserts\" using only for self-checking\
+    \ and not necessary for auto-testing\nif __name__ == '__main__':\n    assert checkio(u\"\
+    pr�f�rent\") == u\"preferent\"\n    assert checkio(u\"loa?i tr?n l??n\") == u\"\
+    loai tran lon\"\n    print('Done')\n"
+  learner_created: false
+status: Solved
+code: "from unicodedata import normalize, category\ndef checkio(in_string):\n    \"\
+  remove accents\"\n    \n    return ''.join(c for c in normalize('NFD', in_string)\
+  \ if category(c) != 'Mn')\n\n    #These \"asserts\" using only for self-checking\
+  \ and not necessary for auto-testing\nif __name__ == '__main__':\n    assert checkio(u\"\
+  pr�f�rent\") == u\"preferent\"\n    assert checkio(u\"loa?i tr?n l??n\") == u\"\
+  loai tran lon\"\n    print('Done')\n"
+seconds_from_change: 40390

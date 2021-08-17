@@ -1,0 +1,206 @@
+<h2>The Hidden Word</h2>
+<style type="text/css">
+ .story img {
+        float: left;
+        /*padding: 10px;*/
+        margin: 10px;
+        border: black;
+        /*box-shadow: 0 0 20px 10px rgba(0, 0, 0, 1);*/
+        /*-moz-box-shadow: 0 0 20px 10px rgba(0, 0, 0, 1);*/
+        /*-webkit-box-shadow: 0 0 20px 10px rgba(0, 0, 0, 1);*/
+
+    }
+</style>
+<div class="story" style="margin-bottom: 15px">
+ <img src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/9fb96e831653478d9cadd12ebd105ecb/jabberwock_sepia.png" width="360px"/>
+</div>
+<div class="story" style="padding-left: 20px; margin-bottom: 0">
+ <h5>
+  JABBERWOCKY
+ </h5>
+ <p>
+  'Twas brillig, and the slithy toves
+  <br/>
+  Did gyre and gimble in the wabe;
+  <br/>
+  All mimsy were the borogoves,
+  <br/>
+  And the mome raths outgrabe.
+ </p>
+ <p>
+  'Beware the Jabberwock, my son!
+  <br/>
+  The jaws that bite, the claws that catch!
+  <br/>
+  Beware the Jubjub bird, and shun
+  <br/>
+  The frumious Bandersnatch!'
+ </p>
+ <p>
+  He took his vorpal sword in hand:
+  <br/>
+  Long time the manxome foe he sought--
+  <br/>
+  So rested he by the Tumtum tree,
+  <br/>
+  And stood awhile in thought.
+ </p>
+ <p>
+  And as in uffish thought he stood,
+  <br/>
+  The Jabberwock, with eyes of flame,
+  <br/>
+  Came whiffling through the tulgey wood,
+  <br/>
+  And burbled as it came!
+ </p>
+ <p>
+  One, two! One, two! And through and through
+  <br/>
+  The vorpal blade went snicker-snack!
+  <br/>
+  He left it dead, and with its head
+  <br/>
+  He went galumphing back.
+ </p>
+ <p>
+  'And hast thou slain the Jabberwock?
+  <br/>
+  Come to my arms, my beamish boy!
+  <br/>
+  O frabjous day! Callooh! Callay!'
+  <br/>
+  He chortled in his joy.
+ </p>
+ <p>
+  'Twas brillig, and the slithy toves
+  <br/>
+  Did gyre and gimble in the wabe;
+  <br/>
+  All mimsy were the borogoves,
+  <br/>
+  And the mome raths outgrabe.
+ </p>
+ <p>
+  "Through the Looking-Glass." Lewis Carroll
+ </p>
+</div>
+<div class="story" style="text-indent: 0; padding-left: 20px;">
+ <p>
+  DREAMING of apples on a wall,
+  <br/>
+  And dreaming often, dear,
+  <br/>
+  I dreamed that, if I counted all,
+  <br/>
+  -How many would appear?
+ </p>
+ <p>
+  "Puzzles from Wonderland." Lewis Carroll
+ </p>
+</div>
+<p>
+ Nicola has solved this puzzle (and I am sure that you will do equally well).
+    To be prepared for more such puzzles, Nicola wants to invent a method to search for words inside poetry.
+    You can help him create a function to search for certain words.
+</p>
+<p>
+ You are given a rhyme (a multiline string), in which lines are separated by "newline" (\n).
+    Casing does not matter for your search, but whitespaces should be removed before your search.
+    You should find the word inside the rhyme in the horizontal (from left to right) or vertical (from up to down) lines.
+    For this you need envision the rhyme as a matrix (2D array).
+    Find the coordinates of the word in the cut rhyme (without whitespaces).
+</p>
+<p>
+ The result must be represented as a list --
+ <strong>
+  [row_start,column_start,row_end,column_end]
+ </strong>
+ , where
+</p>
+<ul>
+ <li>
+  <strong>
+   row_start
+  </strong>
+  is the line number for the first letter of the word.
+ </li>
+ <li>
+  <strong>
+   column_start
+  </strong>
+  is the column number for the first letter of the word.
+ </li>
+ <li>
+  <strong>
+   row_end
+  </strong>
+  is the line number for the last letter of the word.
+ </li>
+ <li>
+  <strong>
+   column_end
+  </strong>
+  is the column number for the last letter of the word.
+ </li>
+ <li>
+  Counting of the rows and columns start from 1.
+ </li>
+</ul>
+<p style="text-align: center;">
+ <img alt="rhymes" class="for_info_only" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/9fb96e831653478d9cadd12ebd105ecb/rhymes.png" title="rhymes" width="700px"/>
+ <img alt="rhymes" class="for_editor_only" src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/9fb96e831653478d9cadd12ebd105ecb/rhymes.png" title="rhymes" width="380px"/>
+</p>
+<p>
+ <strong>
+  Input:
+ </strong>
+ Two arguments. A rhyme as a string and a word as a string (lowercase).
+</p>
+<p>
+ <strong>
+  Output:
+ </strong>
+ The coordinates of the word.
+</p>
+<div class="for_info_only">
+ <p>
+  <strong>
+   Example:
+  </strong>
+ </p>
+ <pre class="brush: python">
+checkio(u"""DREAMING of apples on a wall,
+And dreaming often, dear,
+I dreamed that, if I counted all,
+-How many would appear?""", u"ten") == [2, 14, 2, 16]
+checkio("""He took his vorpal sword in hand:
+Long time the manxome foe he sought--
+So rested he by the Tumtum tree,
+And stood awhile in thought.
+And as in uffish thought he stood,
+The Jabberwock, with eyes of flame,
+Came whiffling through the tulgey wood,
+And burbled as it came!""", "noir") == [4, 16, 7, 16]
+    </pre>
+</div>
+<p class="for_info_only">
+ <strong>
+  How it is used:
+ </strong>
+ This task shows the variance of the positional ciphers.
+    With this cipher you can hide a message within a book which allows you and receiver to send these coded messages.
+</p>
+<p>
+ <strong>
+  Precondition:
+ </strong>
+ The word is given in lowercase
+ <br/>
+ 0 &lt; |word| &lt; 10
+ <br/>
+ 0 &lt; |rhyme| &lt; 300
+</p>
+
+<p><a href="https://py.checkio.org/mission/hidden-word/publications/category/clear">View solutions</a></p>
+<p><a href="https://py.checkio.org/en/mission/hidden-word">See the task on CheckiO</a></p>

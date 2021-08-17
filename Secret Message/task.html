@@ -1,0 +1,87 @@
+<h2>Secret Message</h2>
+<div style="text-align: center">
+ <img src="https://d17mnqrx9pmt3e.cloudfront.net/media/missions/media/553bae8bd22347b19e04f0c0cbe0084c/title.png" style="max-height: 350px"/>
+</div>
+<p class="story">
+ "Where does a wise man hide a leaf? In the forest.
+    But what does he do if there is no forest? ... He grows a forest to hide it in."
+ <br/>
+ -- Gilbert Keith Chesterton
+</p>
+<p>
+ Ever tried to send a secret message to someone without using the postal service? You could use newspapers to tell
+    your secret. Even if someone finds your message, it's easy to brush them off as paranoid and as a
+    conspiracy theorist. One of the simplest ways to hide a secret message is to use capital letters. Let's find some of
+    these secret messages.
+</p>
+<p>
+ You are given a chunk of text. Gather all capital letters in one word in the order that they appear in the text.
+</p>
+<p>
+ For example: text =
+    "
+ <strong>
+  H
+ </strong>
+ ow are you?
+ <strong>
+  E
+ </strong>
+ h, ok.
+ <strong>
+  L
+ </strong>
+ ow or
+ <strong>
+  L
+ </strong>
+ ower?
+ <strong>
+  O
+ </strong>
+ hhh.",
+    if we collect all of the capital letters, we get the message "HELLO".
+</p>
+<p>
+ <strong>
+  Input:
+ </strong>
+ A text as a string (unicode).
+</p>
+<p>
+ <strong>
+  Output:
+ </strong>
+ The secret message as a string or an empty string.
+</p>
+<div class="for_info_only">
+ <p>
+  <strong>
+   Example:
+  </strong>
+ </p>
+ 
+ <pre class="brush: python">find_message(('How are you? Eh, ok. Low or Lower? '
+ 'Ohhh.')) == 'HELLO'
+find_message('hello world!') == ''
+find_message('HELLO WORLD!!!') == 'HELLOWORLD'
+</pre>
+ 
+</div>
+<p class="for_info_only">
+ <strong>
+  How it is used:
+ </strong>
+ This is a simple exercise in working with strings: iterate, recognize and concatenate.
+</p>
+<p>
+ <strong>
+  Precondition:
+ </strong>
+ 0 &lt; len(text) ≤ 1000
+ <br/>
+ all(ch in string.printable for ch in text)
+</p>
+
+<p><a href="https://py.checkio.org/mission/secret-message/publications/category/clear">View solutions</a></p>
+<p><a href="https://py.checkio.org/en/mission/secret-message">See the task on CheckiO</a></p>

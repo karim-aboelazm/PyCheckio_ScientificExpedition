@@ -1,0 +1,110 @@
+<h2>YAML. Simple Dict</h2>
+<!-- Describe task in general -->
+<p>
+ Have you ever heard of such markup language as
+ <a href="https://yaml.org/">
+  YAML
+ </a>
+ ?  It’s a friendly data serialization format. In fact it’s so friendly that both people and programs can read it quite well. You can play around with the standard by following
+ <a href="https://yaml-online-parser.appspot.com/">
+  this link
+ </a>
+ .
+</p>
+<p>
+ YAML is a text, and you need to convert it into an object. But I’m not asking you to implement the entire YAML standard, we’ll implement it step by step.
+</p>
+<p>
+ The first step is the key-value conversion. The key can be any string consisting of Latin letters and numbers. The value can be a single-line string (which consists of spaces, Latin letters and numbers) or a number (int).
+</p>
+<p>
+ I’ll show some examples:
+</p>
+<pre>
+name: Alex
+age: 12
+</pre>
+<p>
+ Converted into an object.
+</p>
+<pre>
+{ 
+  "name": "Alex",
+  "age": 12
+}
+ </pre>
+<p>
+ Note that the number automatically gets type int
+</p>
+<p>
+ Another example shows that the string may contain spaces.
+ <p>
+  <pre>
+name: Alex Fox
+age: 12
+
+class: 12b
+</pre>
+  <p>
+   Will be converted into the next object.
+  </p>
+  <pre>
+{
+  "age": 12, 
+  "name": "Alex Fox", 
+  "class": "12b"
+}
+</pre>
+  <p>
+   Pay attention to a few things. Between the string "age" and the string "class" there is an empty string that doesn’t interfere with parsing. The class starts with numbers, but has letters, which means it cannot be converted to numbers, so its type remains a string (str).
+  </p>
+  <!-- Explain input and output values -->
+  <p>
+   <strong>
+    Input:
+   </strong>
+   A format string.
+  </p>
+  <p>
+   <strong>
+    Output:
+   </strong>
+   An object.
+  </p>
+  <!-- Give some usage examples -->
+  <div class="for_info_only">
+   <p>
+    <strong>
+     Example:
+    </strong>
+   </p>
+   
+   <pre class="brush: python">yaml("""name: Alex
+age: 12""") == {'age': 12, 'name': 'Alex'}
+yaml("""name: Alex Fox
+age: 12
+
+class: 12b""") == {'age': 12,
+ 'class': '12b',
+ 'name': 'Alex Fox'}
+</pre>
+   
+  </div>
+  <!-- Here you can explain some constraints for input-->
+  <!-- The section is optional -->
+  <p>
+   <strong>
+    Precondition:
+   </strong>
+   <i>
+    YAML 1.2 is being used with
+    <a href="https://yaml.org/spec/1.2/spec.html#id2803231">
+     JSON Schema
+    </a>
+    .
+   </i>
+  </p>
+ </p>
+</p>
+<p><a href="https://py.checkio.org/mission/yaml-simple-dict/publications/category/clear">View solutions</a></p>
+<p><a href="https://py.checkio.org/en/mission/yaml-simple-dict">See the task on CheckiO</a></p>

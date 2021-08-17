@@ -1,0 +1,23 @@
+type: checkiO
+files:
+- name: mission.py
+  visible: true
+  text: "from typing import Tuple\n\ndef follow(instructions: str) -> Tuple[int, int]:\n\
+    \    forward = instructions.count('f')\n    left = instructions.count('l')\n \
+    \   right = instructions.count('r')\n    back = instructions.count('b')\n    return\
+    \ (right-left,forward-back)\n\nif __name__ == '__main__':\n    print(\"Example:\"\
+    )\n    print(follow(\"fflff\"))\n    \n    # These \"asserts\" are used for self-checking\
+    \ and not for an auto-testing\n    assert follow(\"fflff\") == (-1, 4)\n    assert\
+    \ follow(\"ffrff\") == (1, 4)\n    assert follow(\"fblr\") == (0, 0)\n    print(\"\
+    Coding complete? Click 'Check' to earn cool rewards!\")\n"
+  learner_created: false
+status: Solved
+code: "from typing import Tuple\n\ndef follow(instructions: str) -> Tuple[int, int]:\n\
+  \    forward = instructions.count('f')\n    left = instructions.count('l')\n   \
+  \ right = instructions.count('r')\n    back = instructions.count('b')\n    return\
+  \ (right-left,forward-back)\n\nif __name__ == '__main__':\n    print(\"Example:\"\
+  )\n    print(follow(\"fflff\"))\n    \n    # These \"asserts\" are used for self-checking\
+  \ and not for an auto-testing\n    assert follow(\"fflff\") == (-1, 4)\n    assert\
+  \ follow(\"ffrff\") == (1, 4)\n    assert follow(\"fblr\") == (0, 0)\n    print(\"\
+  Coding complete? Click 'Check' to earn cool rewards!\")\n"
+seconds_from_change: 38713
